@@ -313,6 +313,6 @@ Mediante *mermaid* tambien se pueden definir la naturaleza de estas clases.
     }
 ```
 
-Para mas informacion:
+**Para mas informacion:**
 
 [MERMAID](https://mermaid.js.org/syntax/classDiagram.html#define-namespace)
