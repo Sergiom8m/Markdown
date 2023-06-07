@@ -4,9 +4,9 @@
 
 Para crear diagramas de clase en *Markdown* se puede utilizar *mermaid* e insertaremos el diagrama como si fuese un codigo de lenguaje *mermaid*.
 
-Comno estaremops usando mermaid tendremos que especificar que tipo de diagrama queremos que interprete, en este caso `classDiagram` en la primera linea.
+Como estaremos usando *mermaid* tendremos que especificar que tipo de diagrama queremos que interprete, en este caso `classDiagram` en la primera linea.
 
-En la sintaxis de *mermaid* para los diagramas de clase e distinguen tres parten principalmente. Una primera parte donde se define el nombre de la clase, una parte intermedia donde se describen los atributos de la clase y una ultima donde se especifican los metodos de la misma.
+En la sintaxis de *mermaid* para los diagramas de clase se distinguen tres partes principalmente. Una primera parte donde se define el nombre de la clase, una parte intermedia donde se describen los atributos de la clase y una ultima donde se especifican los metodos de la misma.
 
 Para definir una clase haremos lo siguiente:
 
@@ -100,7 +100,7 @@ Y el resultado seria el siguiente:
 
 <br>
 
-En caso e querer añadir algun metodo abstracto o estatico habra que añadir * o $, respectivamente, despues de la parentesis del metodo.
+En caso de querer añadir algun metodo abstracto o estatico habra que añadir * o $, respectivamente, despues de la parentesis del metodo.
 
     ```mermaid
         classDiagram 
@@ -136,7 +136,7 @@ Visualmente se veria de la siguiente manera:
 
 Para relacionar las clases con *mermaid* se juntaran los nombres de las dos clases que se quieren relacionar mediante una flecha. 
 
-No obstante, com oen un diagrama UML puede haber diferentes tipos de relaciones se emplean diferentes tipos de flecha para cada una.
+No obstante, como en un diagrama UML puede haber diferentes tipos de relaciones se emplean diferentes tipos de flecha para cada una.
 
 |Flecha|Tipo de relacion|
 |:----:|:--------------:|
@@ -149,7 +149,7 @@ No obstante, com oen un diagrama UML puede haber diferentes tipos de relaciones 
 |..\|>|Realizacion|
 |..|Link (discontinua)|
 
-La relacion se decine de la siguiente manera: 
+La relacion se define de la siguiente manera: 
 
 ```markdown
 [classA][Flecha][ClassB] : [Nombre relacion]
@@ -229,7 +229,7 @@ Aplicado a una clase quedaria algo de este tipo:
 
 ## Clases especiales
 
-Habitualmente en la programacion orientada a objetos ademas de las clases corrientes existen tambine diferentes tipos de clases. Ejemplo de ello son las interfaces, las clases abstractas y/o las enumeraciones.
+Habitualmente en la programacion orientada a objetos ademas de las clases corrientes existen tambien diferentes tipos de clases. Ejemplo de ello son las interfaces, las clases abstractas y/o las enumeraciones.
 
 Mediante *mermaid* tambien se pueden definir la naturaleza de estas clases.
 
