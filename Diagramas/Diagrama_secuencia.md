@@ -287,5 +287,6 @@ En este ejemplo si Unai no estuviese bien no contestaria nada. Si se qiere que U
 
 ```
 
-Mas informacion: 
+Mas informacion:
+
 [MERMAID](https://mermaid.js.org/syntax/sequenceDiagram.html#syntax)
