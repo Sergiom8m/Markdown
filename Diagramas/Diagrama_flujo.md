@@ -1,18 +1,16 @@
-# Diagramas en *Markdown*
+# Diagramas de flujo
 
-*Markdown* permite crear diferentes tipos de diagramas a sus usuarios.
-
-## Diagramas de flujo
+## Sintaxis basica
 
 Para crear diagramas de flujo en *Markdown* se puede utilizar *mermaid* e insertaremos el diagrama como si fuese un codigo de lenguaje *mermaid*.
 
 Primeramente añadiremos el tipo de diagrama seguido de las letras `TB` que sirven para que el diagrama aparezca verticalmente. Si se desea que el diagrama aparezca en horizontal se utilizara `LR`
 
-```markdown
-```mermaid
-flowchart TB
-\```        (no usar \, es para escapar los caracteres)
-```
+
+    ```mermaid
+    flowchart TB
+    ```       
+
 
 Cada nodo se pondra en una linea, primero se pondra el identificador del nodo y despues el contenido textual del mismo envuelto en [ ]. Los caracteres especiales que envuelven el contenido del nodo dictaminan cual sera la forma de ese nodo. Existen las siguientes opciones:
 
@@ -93,28 +91,30 @@ flowchart TB
 A[(DB)]
 ```  
 
+## Diagrama de flujo
+
 Una vez conocida la sintaxis de cada uno de los tipos de nodo, es importante saber como se unen entre si. Siguiendo la estructura de *mermaid* añadiremos la primera linea con el tipo de diagrama y `TB` seguido de todos los nodos. Despues se añadira lo siguiente para unir los nodos:
 
-```markdown
-```mermaid
-flowchart TB
-    A(Inicio)
-    B[/Escribe tu contraseña/]
-    C[\psw\]
-    D{psw = '1234'}
-    E[/Login correcto/]
-    F[/Login incorrecto, try again/]
-    G(Fin)
 
-    A-->B-->C-->D
+    ```mermaid
+    flowchart TB
+        A(Inicio)
+        B[/Escribe tu contraseña/]
+        C[\psw\]
+        D{psw = '1234'}
+        E[/Login correcto/]
+        F[/Login incorrecto, try again/]
+        G(Fin)
 
-    D--> |True| E
-    D--> |False| F
+        A-->B-->C-->D
 
-    E-->G
-    F-->B
-\```
-```
+        D--> |True| E
+        D--> |False| F
+
+        E-->G
+        F-->B
+    ```
+
 
 ```mermaid
 flowchart TB
@@ -139,29 +139,29 @@ flowchart TB
 
 Si se desea añadir un titulo al diagrama se añadira lo siguiente en el codigo anterior:
 
-```markdown
-```mermaid
----
-title: Login flowchart
----
-flowchart TB
-    A(Inicio)
-    B[/Escribe tu contraseña/]
-    C[\psw\]
-    D{psw = '1234'}
-    E[/Login correcto/]
-    F[/Login incorrecto, try again/]
-    G(Fin)
 
-    A-->B-->C-->D
+    ```mermaid
+    ---
+    title: Login flowchart
+    ---
+    flowchart TB
+        A(Inicio)
+        B[/Escribe tu contraseña/]
+        C[\psw\]
+        D{psw = '1234'}
+        E[/Login correcto/]
+        F[/Login incorrecto, try again/]
+        G(Fin)
 
-    D--> |True| E
-    D--> |False| F
+        A-->B-->C-->D
 
-    E-->G
-    F-->B
-\```
-```
+        D--> |True| E
+        D--> |False| F
+
+        E-->G
+        F-->B
+    ```
+
 
 ```mermaid
 ---
@@ -220,26 +220,26 @@ flowchart TB
 
 Por ultimo, se pueden crear subgrafos dentro de un mismo diagrama de flujo. Para ello se emplea la siguiente estructura:
 
-```markdown
-```mermaid
-flowchart TB
-    
-    A-->B
-    subgraph Fase1
-    B-->C
-    C-->D
-    D-->E
-    end
-    subgraph Fase2
-    E-->F
-    F-->G
-    end
-    subgraph Fase3
-    G-->H
-    H--I
-    end
-\```
-```
+
+    ```mermaid
+    flowchart TB
+        
+        A-->B
+        subgraph Fase1
+        B-->C
+        C-->D
+        D-->E
+        end
+        subgraph Fase2
+        E-->F
+        F-->G
+        end
+        subgraph Fase3
+        G-->H
+        H--I
+        end
+    ```
+
 El resultado seria el siguiente:
 
 ```mermaid
